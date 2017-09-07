@@ -1,0 +1,77 @@
+<!-- Load the Polymer.Element base class -->
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+<script src="../webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../bower_components/wired-input/wired-input.html">
+<link rel="import" href="../bower_components/wired-radio-group/wired-radio-group.html">
+<link rel="import" href="../bower_components/wired-radio/wired-radio.html">
+<link rel="import" href="../bower_components/wired-card/wired-card.html">
+<link rel="import" href="../bower_components/wired-button/wired-button.html">
+<link rel="import" href="../bower_components/wired-toggle/wired-toggle.html">
+
+<dom-module id="my-new-view">
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style is ="custom-style">
+      :host {
+        display: block;
+
+        padding: 16px;
+      }
+      wired-card {
+      max-width: 500px;
+      padding: 10px;
+      margin: 5px 0;
+      }
+
+      .form {
+        font-family: 'Shadows Into Light', sans-serif;
+        font-weight: 400;
+      }
+
+      wired-input {
+      width: 400px;
+      margin: 5px 0;
+      }
+
+      wired-radio {
+      display: inline-block;
+      margin: 5px;
+      }
+      .customColors {
+      --wired-toggle-off-color: black;
+      --wired-toggle-on-color: red;
+  }
+    </style>
+
+    <h1>New view</h1>
+    <wired-card class="form">
+      <h3>Form Title</h3>
+      <div>
+        <wired-input placeholder="full name"></wired-input>
+      </div>
+      <div>
+        <wired-input placeholder="location"></wired-input>
+      </div>
+      <wired-radio-group>
+        <wired-radio name="male" text="male"></wired-radio>
+        <wired-radio name="female" text="female"></wired-radio>
+      </wired-radio-group>
+      <div>
+        <wired-button text="Cancel"></wired-button>
+        <wired-button text="Save"></wired-button>
+      </div>
+      <div>
+        <wired-toggle class="customColors"></wired-toggle>
+      </div>
+    </wired-card>
+  </template>
+  <script>
+    // Your new element extends the Polymer.Element base class
+    class MyNewView extends Polymer.Element {
+      static get is() { return 'my-new-view'; }
+    }
+    //Now, register your new custom element so the browser can use it
+    customElements.define(MyNewView.is, MyNewView);
+  </script>
+</dom-module>

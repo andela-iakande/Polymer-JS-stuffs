@@ -8,6 +8,11 @@
 <link rel="import" href="../bower_components/wired-card/wired-card.html">
 <link rel="import" href="../bower_components/wired-button/wired-button.html">
 <link rel="import" href="../bower_components/wired-toggle/wired-toggle.html">
+<link rel="import" href="../bower_components/wired-menu-bar/wired-menu-bar.html">
+<link rel="import" href="../bower_components/wired-menu-item/wired-menu-item.html">
+
+
+
 
 <dom-module id="my-wire-frame">
   <!-- Defines the element's style and local DOM -->
@@ -17,6 +22,9 @@
         display: block;
 
         padding: 16px;
+      }
+      .wired-menu{
+        padding-bottom:70px;
       }
       wired-card {
       max-width: 500px;
@@ -47,6 +55,23 @@
     <h1>Wire Frame</h1>
     <wired-card class="form">
       <h3>Form Title</h3>
+      <div class="wired-menu">
+        <wired-menu-bar>
+          <wired-menu-item text="Home"></wired-menu-item>
+          <wired-menu-item text="Profile">
+            <wired-menu-item text="New"></wired-menu-item>
+            <wired-menu-item text="School"></wired-menu-item>
+            <wired-menu-item text="Student"></wired-menu-item>
+          </wired-menu-item>
+          <wired-menu-item text="Staff">
+            <wired-menu-item text="Academic"></wired-menu-item>
+            <wired-menu-item text="Non-Academic"></wired-menu-item>
+            <wired-menu-item text="Casual"></wired-menu-item>
+          </wired-menu-item>
+          <wired-menu-item text="Help"></wired-menu-item>
+          <wired-menu-item disabled text="Disabled"></wired-menu-item>
+        </wired-menu-bar>
+      </div>  
       <div>
         <wired-input placeholder="full name"></wired-input>
       </div>

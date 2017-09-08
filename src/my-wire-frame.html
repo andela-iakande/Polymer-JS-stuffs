@@ -9,7 +9,7 @@
 <link rel="import" href="../bower_components/wired-button/wired-button.html">
 <link rel="import" href="../bower_components/wired-toggle/wired-toggle.html">
 
-<dom-module id="my-new-view">
+<dom-module id="my-wire-frame">
   <!-- Defines the element's style and local DOM -->
   <template>
     <style is ="custom-style">
@@ -44,7 +44,7 @@
   }
     </style>
 
-    <h1>New view</h1>
+    <h1>Wire Frame</h1>
     <wired-card class="form">
       <h3>Form Title</h3>
       <div>
@@ -68,10 +68,10 @@
   </template>
   <script>
     // Your new element extends the Polymer.Element base class
-    class MyNewView extends Polymer.Element {
-      static get is() { return 'my-new-view'; }
+    class MyWireFrame extends Polymer.Element {
+      static get is() { return 'my-wire-frame'; }
     }
     //Now, register your new custom element so the browser can use it
-    customElements.define(MyNewView.is, MyNewView);
+    customElements.define(MyWireFrame.is, MyWireFrame);
   </script>
 </dom-module>
